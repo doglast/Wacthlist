@@ -12,6 +12,8 @@ import {
 import FormButton from './components/FormButton';
 import FormInput from './components/FormInput';
 
+import { login } from '../../services/api';
+
 
 const Login = ({ navigation }) => {
     const [email, setEmail] = useState ();
@@ -27,12 +29,7 @@ const Login = ({ navigation }) => {
 
 }}>
   <ImageBackground source={require("../../assets/images/login.png")} style={styles.image}>
-    <View style={styles.container}>
-      
-        <Image 
-            source={require('../../assets/images/logo.png')}
-            styles={styles.logo}
-        />
+    <View style={styles.container}>          
 
         <FormInput 
             labelValue={email}
@@ -52,7 +49,7 @@ const Login = ({ navigation }) => {
         />
         <FormButton
           buttonTitle="Entrar"
-          onPress={() => navigation.navigate("Timeline")}
+          onPress={() => {login(userEmail, userPassword)}}
         />
       <TouchableOpacity style={styles.forgotButton} onPress={() => {}}>
         <Text style={styles.navButtonText}>Esqueceu a senha?</Text>
@@ -86,8 +83,8 @@ const styles = StyleSheet.create({
 
     },
     logo: {
-      height: 150,
-      width: 150,
+      height: 15,
+      width: 15,
       resizeMode: 'cover',
     },
     text: {

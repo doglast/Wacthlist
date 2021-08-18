@@ -1,6 +1,14 @@
 import React, { useState, useRef } from 'react';
-import { View, ScrollView, Text, StyleSheet, Dimensions, ImageBackground, 
-  TextInput, TouchableOpacity, Image } from 'react-native';
+import { 
+  View, 
+  ScrollView, 
+  Text, 
+  StyleSheet, 
+  Dimensions, 
+  ImageBackground, 
+  TextInput, 
+  TouchableOpacity, 
+  Image } from 'react-native';
 import Carousel from 'react-native-snap-carousel';
 
 import Icon from 'react-native-vector-icons/MaterialIcons';

@@ -30,10 +30,7 @@ const Logon = ({ navigation }) => {
   <ImageBackground source={require("../../assets/images/login.png")} style={styles.image}>
     <View style={styles.container}>
       
-        <Image 
-            source={require('../../assets/images/logo.png')}
-            styles={styles.logo}
-        />
+        
         <FormInput 
             labelValue={name}
             onChangeText={(userName) => setName(userName)}
