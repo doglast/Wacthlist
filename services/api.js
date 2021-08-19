@@ -1,7 +1,7 @@
 import axios from "axios";
 
 
-  export async function login(email, senha){
+  async function login(email, senha){
     const response = await axios.post("http://localhost:3006/usuarios/cadastro",{
       email: email,
       senha: senha
@@ -15,8 +15,8 @@ import axios from "axios";
     }
   }
 
-  export async function filmes(){
-    const response = await axios.get("http://localhost:3006/filmes");
+  async function filmes(){
+    const response = await axios.get("http://localhost:3006/filmes/lista");
     console.log(response);
     //if(response.status === 200){
     //  console.log(response);
@@ -25,6 +25,6 @@ import axios from "axios";
     //}
   }
 
-const api = { login, filmes };
+const api = { filmes, login };
 
 export default api ;

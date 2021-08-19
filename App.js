@@ -6,7 +6,9 @@ import { StatusBar } from 'react-native';
 import{ 
   Homepage, 
   Login, 
-  Logon
+  Logon,
+  MovieIndex,
+  SerieIndex
 } from './views';
 
 
@@ -38,6 +40,8 @@ const App = () => {
             <Stack.Screen name='Homepage' component={Homepage}/>
             <Stack.Screen name='Login' component={Login}/>
             <Stack.Screen name='Logon' component={Logon}/>
+            <Stack.Screen name='MovieIndex' component={MovieIndex}/>
+            <Stack.Screen name='SerieIndex' component={SerieIndex}/>
         </Stack.Navigator>
     </NavigationContainer>
   );

@@ -57,11 +57,8 @@ const Logon = ({ navigation }) => {
         />
         <FormButton
           buttonTitle="Entrar"
-          onPress={() => navigation.navigate("Homepage")}
-        />
-              <TouchableOpacity style={styles.forgotButton} onPress={() => {}}>
-        <Text style={styles.navButtonText}>Esqueceu a senha?</Text>
-      </TouchableOpacity>
+          onPress={() => navigation.navigate("MovieIndex")}
+        />    
 
       <TouchableOpacity
         style={styles.forgotButton}
