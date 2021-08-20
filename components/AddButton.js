@@ -1,8 +1,8 @@
 import React from 'react';
 import {Text, TouchableOpacity, StyleSheet} from 'react-native';
-import {windowHeight, windowWidth} from '../../../utils/Dimentions';
+import {windowHeight, windowWidth} from '../utils/Dimentions';
 
-const FormButton = ({buttonTitle, ...rest}) => {
+const AddButton = ({buttonTitle, ...rest}) => {
   return (
     <TouchableOpacity style={styles.buttonContainer} {...rest}>
       <Text style={styles.buttonText}>{buttonTitle}</Text>
@@ -10,21 +10,29 @@ const FormButton = ({buttonTitle, ...rest}) => {
   );
 };
 
-export default FormButton;
+export default AddButton;
 
 const styles = StyleSheet.create({
   buttonContainer: {
     marginTop: 10,
-    width: '100%',
+    width: '90%',
     height: windowHeight / 15,
-    backgroundColor: '#e2ad48',
+    backgroundColor: '#7BF6D3',
     padding: 10,
+    left:18,
     alignItems: 'center',
     justifyContent: 'center',
-    borderRadius: 3,
+    justifyContent: 'center',
+    borderRadius: windowHeight * 0.01,
+    marginTop: windowHeight * 0.03,
+    shadowColor: "#000",
+    shadowOffset: {width:0.1, height:1},
+    shadowOpacity: 0.5,
+    shadowRadius: 3,
+    elevation: 2
   },
   buttonText: {
-    fontSize: 18,
+    fontSize: 42,
     fontWeight: 'bold',
     color: '#ffffff',
   },

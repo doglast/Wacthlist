@@ -2,7 +2,7 @@ import React from 'react';
 import { View, StyleSheet, TextInput } from 'react-native';
 
 import AntDesign from 'react-native-vector-icons/AntDesign';
-import { windowHeight, windowWidth } from '../../../utils/Dimentions';
+import { windowHeight, windowWidth } from '../utils/Dimentions';
 
 
 const FormInput = ({labelValue, placeholderText, iconType, ... rest}) => {

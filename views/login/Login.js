@@ -1,32 +1,24 @@
-import React, { useContext, useState} from "react";
+import React, { useEffect, useState} from "react";
 import {
   View,
   Text,
   TouchableOpacity,
-  Image,
   StyleSheet,
-  ScrollView,
   ImageBackground,
-    } from 'react-native';
+} from 'react-native';
     
-import FormButton from './components/FormButton';
-import FormInput from './components/FormInput';
-
-import { login } from '../../services/api';
-
+import FormButton from '../../components/FormButton';
+import FormInput from '../../components/FormInput';
 
 const Login = ({ navigation }) => {
     const [email, setEmail] = useState ();
     const [password, setPassword] = useState ();
-
 
     return (
 <View style={{
   flexDirection:"column",
   justifyContent:"center",
   alignContent:"center",
-
-
 }}>
   <ImageBackground source={require("../../assets/images/login.png")} style={styles.image}>
     <View style={styles.container}>          
@@ -49,11 +41,8 @@ const Login = ({ navigation }) => {
         />
         <FormButton
           buttonTitle="Entrar"
-          onPress={() => {login(userEmail, userPassword)}}
+          onPress={() => navigation.navigate('Homepage')}
         />
-      <TouchableOpacity style={styles.forgotButton} onPress={() => {}}>
-        <Text style={styles.navButtonText}>Esqueceu a senha?</Text>
-      </TouchableOpacity>
 
       <TouchableOpacity
         style={styles.forgotButton}

@@ -9,8 +9,8 @@ import {
   ImageBackground,
     } from 'react-native';
     
-import FormButton from './components/FormButton';
-import FormInput from './components/FormInput';
+import FormButton from '../../components/FormButton';
+import FormInput from '../../components/FormInput';
 
 
 const Logon = ({ navigation }) => {
@@ -57,7 +57,7 @@ const Logon = ({ navigation }) => {
         />
         <FormButton
           buttonTitle="Entrar"
-          onPress={() => navigation.navigate("MovieIndex")}
+          onPress={() => navigation.navigate("Homepage")}
         />    
 
       <TouchableOpacity

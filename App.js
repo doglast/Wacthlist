@@ -8,7 +8,9 @@ import{
   Login, 
   Logon,
   MovieIndex,
-  SerieIndex
+  MovieCreate,
+  SerieIndex,
+  SerieCreate,
 } from './views';
 
 
@@ -41,7 +43,9 @@ const App = () => {
             <Stack.Screen name='Login' component={Login}/>
             <Stack.Screen name='Logon' component={Logon}/>
             <Stack.Screen name='MovieIndex' component={MovieIndex}/>
+            <Stack.Screen name='MovieCreate' component={MovieCreate}/>
             <Stack.Screen name='SerieIndex' component={SerieIndex}/>
+            <Stack.Screen name='SerieCreate' component={SerieCreate}/>
         </Stack.Navigator>
     </NavigationContainer>
   );

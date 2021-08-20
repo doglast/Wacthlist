@@ -8,14 +8,15 @@ import{
 } from 'react-native';
 const {width, height} = Dimensions.get('window');
 
-const MovieCard = ({item}) =>{
+const SerieCard = ({item}) =>{
   return(
+    
     <ScrollView style={styles.cardView}>
         <Image style={styles.imagem} source={{uri:item.Imagem}}/>
         <Text style={styles.titulo}>{item.Titulo}</Text>
-        <Text style={styles.anoLancamento}>{item.AnoLancamento}</Text>
-        <Text style={styles.anoLancamento}>Duração de aproximada {item.Duracao} horas</Text>
-        <Text style={styles.descricao}>Nota: {item.Nota} / 5 </Text>
+        <Text style={styles.anoLancamento}>{item.AnoLancamento}  -  Canal: {item.Canal} </Text>
+        <Text style={styles.anoLancamento}>Duração de aproximada {item.Duracao} minutos</Text>
+        <Text style={styles.descricao}>Nota: {item.Nota} / 5  </Text>
         <Text style={styles.descricao}>{item.Sinopse}</Text>
     </ScrollView>
   )
@@ -63,4 +64,4 @@ const styles = StyleSheet.create({
   nota:{},
 })
 
-export default MovieCard;
+export default SerieCard;

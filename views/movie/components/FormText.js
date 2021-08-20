@@ -5,7 +5,7 @@ import AntDesign from 'react-native-vector-icons/AntDesign';
 import { windowHeight, windowWidth } from '../../../utils/Dimentions';
 
 
-const FormInput = ({labelValue, placeholderText, iconType, ... rest}) => {
+const FormText = ({labelValue, placeholderText, iconType, ... rest}) => {
   return (
     <View style={styles.inputContainer}>
             <View style={styles.iconStyle}>
@@ -14,7 +14,7 @@ const FormInput = ({labelValue, placeholderText, iconType, ... rest}) => {
             <TextInput 
                 value={labelValue}
                 style={styles.input}
-                numberOfLines={1}
+                numberOfLines={6}
                 placeholder={placeholderText}
                 placeholderTextColor="#666"
                 {...rest}
@@ -23,7 +23,7 @@ const FormInput = ({labelValue, placeholderText, iconType, ... rest}) => {
   );
 };
 
-export default FormInput;
+export default FormText;
 
 const styles = StyleSheet.create({
     inputContainer: {

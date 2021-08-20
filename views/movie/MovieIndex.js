@@ -1,15 +1,11 @@
 import React, { useState, useEffect} from 'react';
 import{
-  View,
-  StyleSheet,
-  Text, 
-  Button,
   FlatList,
-  TouchableOpacity
+  ScrollView
 } from 'react-native'
 import MovieCard from './components/MovieCard';
-import {filmes} from '../../services/api';
 import axios from 'axios';
+import AddButton from '../../components/AddButton';
 
 const MovieIndex = ({navigation}) =>{
   
@@ -34,7 +30,11 @@ const MovieIndex = ({navigation}) =>{
   }
 
   return(
-    <View>
+    <ScrollView>
+      <AddButton
+          buttonTitle="+"
+          onPress={() => navigation.navigate("MovieCreate")}
+        />   
       <FlatList
         data =  {movie.filmes}
         keyExtractor = {(item, index) => 'key' + index}
@@ -42,9 +42,9 @@ const MovieIndex = ({navigation}) =>{
           return <MovieCard item = {item}/>
         }}
       />         
-    </View>
+    </ScrollView>
     
   );
 }
 
-export default MovieIndex
+export default MovieIndex;
