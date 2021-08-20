@@ -1,11 +1,9 @@
-import React, { useContext, useState} from "react";
+import React, {useState} from "react";
 import {
   View,
   Text,
   TouchableOpacity,
-  Image,
   StyleSheet,
-  ScrollView,
   ImageBackground,
     } from 'react-native';
     
